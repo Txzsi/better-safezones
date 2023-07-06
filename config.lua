@@ -21,9 +21,9 @@ config.text = {
 config.framework = {
     enabled = false, -- enable NAT2K15 framework department bypass? 
     resourceName = 'framework',
-    bypass = {
-        'BCSO',
-        'LSPD'
+    bypassLevels = {
+        'bcso_level',
+        'lspd_level'
     }
 }
 
