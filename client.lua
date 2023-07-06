@@ -46,7 +46,7 @@ function safezoneBypass()
     if (config.framework.enabled) then
         local PlyId = GetPlayerServerId(PlayerId())
         local Framework = exports[config.framework.resourceName]:getclientdept(PlyId)
-        for k, v in pairs(config.framework.bypass) do
+        for k, v in pairs(config.framework.bypassLevels) do
             if (v == Framework[PlyId].level) then
                 bypass = true
                 break;
