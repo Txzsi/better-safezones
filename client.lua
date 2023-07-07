@@ -11,8 +11,8 @@ Citizen.CreateThread(function()
             for k, v in pairs(config.locations) do
                 local distance = GetDistanceBetweenCoords(pedCoords.x, pedCoords.y, pedCoords.z, v.xyz)
                 if (distance <= config.distance) then
-                    notify(config.text.enteredZone)
                     idle = 0
+                    notify(config.text.enteredZone)
                     enteredZone()
                     DisableControlAction(0, 24, true)
                     DisableControlAction(0, 257, true)
