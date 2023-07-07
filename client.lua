@@ -26,7 +26,7 @@ Citizen.CreateThread(function()
                     DisableControlAction(0, 81, true)
                     SetPlayerCanDoDriveBy(ped, false)
                     Draw(config.text.displayText, config.text.screenCoords.x, config.text.screenCoords.y, config.text.textSize, 8)
-                    if (IsPedInAnyVehicle(ped)) then
+                    if (IsPedInAnyVehicle(ped) and config.reduceVehicleSpeed) then
                         local vehicle = GetVehiclePedIsIn(ped, false)
                         SetEntityMaxSpeed(vehicle, (config.vehicleSpeed / 2.236936))
                     end
